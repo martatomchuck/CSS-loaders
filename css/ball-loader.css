@@ -1,0 +1,85 @@
+.ball {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+  
+  .ball-background {
+    height: calc(100vh - 20px);
+    background-color: #D81159;
+    margin-bottom: 20px;
+  }
+  
+  .ball-loader {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    -webkit-animation: loader 1s 0s infinite alternate ease-in-out;
+    animation: loader 1s 0s infinite alternate ease-in-out;
+  }
+  
+  .ball-loader::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    -webkit-animation: loader-ball 1s 0s infinite;
+    animation: loader-ball 1s 0s infinite;
+  }
+  
+  @-webkit-keyframes loader {
+    100% {
+      -webkit-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+    }
+  }
+  
+  @keyframes loader {
+    100% {
+      -webkit-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+    }
+  }
+  
+  @-webkit-keyframes loader-ball {
+    0% {
+      -webkit-transform: translate(50%, -50%) scale(1, 0.8);
+      transform: translate(50%, -50%) scale(1, 0.8);
+    }
+    50% {
+      -webkit-transform: translate(50%, -50%) scale(1);
+      transform: translate(50%, -50%) scale(1);
+    }
+    100% {
+      -webkit-transform: translate(50%, -50%) scale(1, 0.8);
+      transform: translate(50%, -50%) scale(1, 0.8);
+    }
+  }
+  
+  @keyframes loader-ball {
+    0% {
+      -webkit-transform: translate(50%, -50%) scale(1, 0.8);
+      transform: translate(50%, -50%) scale(1, 0.8);
+    }
+    50% {
+      -webkit-transform: translate(50%, -50%) scale(1);
+      transform: translate(50%, -50%) scale(1);
+    }
+    100% {
+      -webkit-transform: translate(50%, -50%) scale(1, 0.8);
+      transform: translate(50%, -50%) scale(1, 0.8);
+    }
+  }
+  
+  
+  
